@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 15s   # Adjust as needed
+
+scrape_configs:
+  - job_name: 'csvserver'
+    static_configs:
+      - targets: ['csvserver:9300']   # Port 9300 is exposed by the csvserver service
+
